@@ -204,5 +204,6 @@
     transform: translateY(4px);
   }
   .completed{
-    background-color: brown;
+    text-decoration: line-through;
+  opacity: 0.5;
   }
