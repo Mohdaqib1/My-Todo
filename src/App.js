@@ -3,6 +3,7 @@ import './App.css';
 
 import SecondComponent from './Components/SecondComponent';
 import FirstComponents from "./Components/FirstComponent";
+//import ShowTodo from "./Components/ShowTodo";
 
 
 import { BrowserRouter as Router, Switch , Route , Link} from "react-router-dom";
@@ -42,10 +43,14 @@ export default function App() {
             <FirstComponents  inputText={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText} />
             <SecondComponent todos={todos} setTodos={setTodos} />
           </Route>
+          <Route path="/ShowTodo">
+          <SecondComponent todos={todos} setTodos={setTodos} />
+          </Route>
          
           <Route path="/">
             <Home  />          
           </Route>
+          
         </Switch>
       </div>
     </Router>
@@ -64,7 +69,11 @@ function Home() {
          <h2 >
              Add Item
          </h2><p/>
-         <Link to="/secondcomponents" ><button className="bu">click</button>   <p/></Link>
+         <Link to="/secondcomponents" ><button className="bu">click</button>   <p/></Link><br/>
+         <h2 >
+             Show Items
+         </h2><p/>
+         <Link to="/ShowTodo" ><button className="bu">click</button>   <p/></Link>
            
         
     </div>

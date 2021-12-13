@@ -18,17 +18,19 @@ const ShowTodo = ({text,todo, todos, setTodos }) => {
             return item;
         }));
     };
+
+    
     return(
         
         <div className="inp">
-              
+            
               <table className="t1">
                    <tr>
                         <td className={`todo-item ${todo.completed? "completed" : ""}`}>  {text}
                           <button  onClick={completeHandler} className="b2e" >   <img src={Edit} className="b2ed"/>  </button> 
                            <button  onClick={() => {
     const confirmBox = window.confirm(
-      "Do you really want to delete this Crumb?"
+      "Do you really want to delete this item?"
     )
     if (confirmBox === true) {
         deleteHandler()

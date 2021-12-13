@@ -28,7 +28,7 @@ import React from 'react';
                  Add 
              </button> 
          </form>   
-         <h3 className="frm">Show Data</h3>
+        
          </div>   ); 
  }; 
  
